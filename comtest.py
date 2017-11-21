@@ -25,7 +25,7 @@ for p in ports:
 
 #ser=serial.Serial(port='COM4')
 #ser=serial.Serial(port]='/dev/ttymodem542')
-
+#ifha;oifhad;oifh
 def run():
     action = "empty"
     while action != "q":
