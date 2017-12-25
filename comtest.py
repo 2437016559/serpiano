@@ -12,8 +12,8 @@ for p in ports:
     else :
 	    print ("No Arduino Device was found connected to the computer")
 
-song1 = ['1','1','5','5','6','6','5','5','4','4','3','3','2','2','1','1']
-song2 = ['1','2','3','1','1','2','3','1','3','4','5','3','4','5']
+song1 = ['star','1','1','5','5','6','6','5','5','4','4','3','3','2','2','1','1']
+song2 = ['hallo','1','2','3','1','1','2','3','1','3','4','5','3','4','5']
 
 f = open('mysongs.csv', 'r')
 data = f.read()
@@ -40,6 +40,7 @@ def run():
         action = input("> ")
         if action == "1":
             print("song name is:")
+            print(song1[0])
             for notes in song1:
                 ser.write(notes.encode())
                 print ("send:"+notes)
