@@ -22,6 +22,13 @@ print(rows[0:5])
 row=rows[0]
 song1 = row.split(',')
 
+songs=[]
+for row in rows:
+    song=row.spllit(',')
+    songs.append(song)
+print songs
+
+
 
 #ser=serial.Serial(port='COM4')
 #ser=serial.Serial(port]='/dev/ttymodem542')
