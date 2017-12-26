@@ -24,17 +24,21 @@ song1 = row.split(',')
 
 songs=[]
 for row in rows:
-    song=row.spllit(',')
+    song=row.split(',')
     songs.append(song)
-print songs
+print(songs)
 
 album={}
-album["star"]=0
-
+album["tinkelstar"]=0
 n=0
-for song in song:
-    album[song[0]]=n
+for song in songs:
+    songname=song[0]
+    print("songname is %s" %(songname))
+    album[songname]=n
     n=n+1
+
+songid1=album["tinkelstar"]
+print("songid is %d\n" %(songid1))
 
 #ser=serial.Serial(port='COM4')
 #ser=serial.Serial(port]='/dev/ttymodem542')
