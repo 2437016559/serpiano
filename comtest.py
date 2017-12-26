@@ -28,6 +28,9 @@ for row in rows:
     songs.append(song)
 print songs
 
+album={}
+album["star"]=0
+
 
 
 #ser=serial.Serial(port='COM4')
