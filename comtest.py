@@ -36,6 +36,7 @@ for song in songs:
     print("songname is %s" %(songname))
     album[songname]=n
     n=n+1
+print(album)
 
 songid1=album["tinkelstar"]
 print("songid is %d\n" %(songid1))
