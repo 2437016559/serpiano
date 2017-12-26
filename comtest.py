@@ -31,7 +31,10 @@ print songs
 album={}
 album["star"]=0
 
-
+n=0
+for song in song:
+    album[song[0]]=n
+    n=n+1
 
 #ser=serial.Serial(port='COM4')
 #ser=serial.Serial(port]='/dev/ttymodem542')
