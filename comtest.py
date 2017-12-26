@@ -6,19 +6,26 @@ print ('hello')
 ports = list(serial.tools.list_ports.comports())
 print (ports)
 
-song1 = ['1','1','5','5','6','6','5','5','4','4','3','3','2','2','1','1']
+
 song2 = ['1','2','3','1','1','2','3','1','3','4','5','3','4','5']
+
+
+f = open("song.csv")
+data = f.read()
+numbers = data.split('\n')
+song1 = numbers[0].split(',')
+
 
 f = open('mysongs.csv', 'r')
 data = f.read()
 rows = data.split('\n')
 print(rows[0:5])
 row=rows[0]
-song1 = row.split(',')
+song3 = row.split(',')
 
 for p in ports:
     print (p[1])
-    if "Arduino" in p[1]:
+    if "Serial" in p[1]:
 	    ser=serial.Serial(port=p[0])
     else :
 	    print ("No Arduino Device was found connected to the computer")
@@ -32,6 +39,7 @@ def run():
         print ('select which song do you want to play ? 1,2 q and others for quit')
         action = input("> ")
         if action == "1":
+            print(song1)
             for notes in song1:
                 ser.write(notes.encode())
                 print ("send:"+notes)
